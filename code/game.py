@@ -2,16 +2,18 @@
 # -*- coding: utf-8 -*-
 import pygame as pg
 
+from code.Const import WIN_WIDTH, WIN_HEIGHT
 from code.menu import Menu
 
 
 class Game:
     def __init__(self):
-        self.window = None
+
         pg.init()
-        window = pg.display.set_mode(size=(600, 480))
+        self.window = pg.display.set_mode(size=(WIN_WIDTH, WIN_HEIGHT))
 
     def run(self, ):
+
         print('Setup Start')
 
         print('Setup Finish')
@@ -21,9 +23,5 @@ class Game:
             menu = Menu(self.window)
             menu.run()
             pass
-            # Check for all events
-           # for event in pg.event.get():
-                #if event.type == pg.QUIT:
-                    #pg.quit()  # Close Window
-                        #quit()  # end pygame
+
 
